@@ -1,6 +1,6 @@
 # awk '/^>/ {sub(/ .*/, "", $0)} {print}' ../data/test.fasta > ../data/test_clean.fasta
 
-cd /data3/zd/LucaOneApp/LucaOneApp-master/algorithms
+cd ../LucaOneApp/LucaOneApp-master/algorithms
 python inference_embedding_lucaone.py \
     --llm_dir /data3/zd/LucaOneApp/models \
     --llm_type lucaone_gplm \
