@@ -25,23 +25,23 @@ UniVH was trained on a large-scale dataset, encompassing 90 viral families and 2
    - After downloading from Zenodo, **extract (unzip) all files and place the extracted contents directly into the `UniVH-model-main/` project folder** (i.e., the repository root directory).
    - `LucaOneApp/` is downloaded from **[LucaOne](https://github.com/LucaOne/LucaOne)**.
 
-**Example directory layout (after extraction):**
-```text
-UniVH-model-main/
-  README.md
-  01_hmmscan.py
-  01_lucaone.sh
-  02_predict_geoNA.py
-  protein_embed_dict_20250912_010034.pkl
-  protein_func_map_20250912_010034.pkl
-  combined.hmm
-  host_info_geo_env_0.9.csv
-  kegg_host_final.csv
-  vfam.annotations.tsv
-  model_train/
-  test/
-  LucaOneApp/
-```
+   **Example directory layout (after extraction):**
+   ```text
+   UniVH-model-main/
+     README.md
+     01_hmmscan.py
+     01_lucaone.sh
+     02_predict_geoNA.py
+     protein_embed_dict_20250912_010034.pkl
+     protein_func_map_20250912_010034.pkl
+     combined.hmm
+     host_info_geo_env_0.9.csv
+     kegg_host_final.csv
+     vfam.annotations.tsv
+     model_train/
+     test/
+     LucaOneApp/
+   ```
 
 2. **Protein Functional Annotation (HMM) & Virus–Host Combination Generation**  
    - This step runs **HMM-based functional annotation** for the input viral proteins, summarizes the annotation results, and merges them with VFAM functional descriptions to produce a final annotated feature table.  
@@ -101,6 +101,7 @@ python 02_predict_geoNA.py --pred_dir ../UniVH-model-main/test
 
 ## Reference
 If you use this dataset or framework, please cite the corresponding publication.
+
 
 
 
