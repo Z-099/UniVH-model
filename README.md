@@ -98,13 +98,10 @@ python 02_predict_geoNA.py --pred_dir ../UniVH-model-main/test
   Each row is a virus–host pair; `pred_prob` is the predicted interaction probability (0–1).
 
 ---
-![Uploading image.png…]()
-
-
----
 
 ## Reference
 If you use this dataset or framework, please cite the corresponding publication.
+
 
 
 
