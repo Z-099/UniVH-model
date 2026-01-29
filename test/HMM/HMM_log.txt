@@ -1,0 +1,15 @@
+=== HMMSCAN PROCESSING STARTED AT 2026-01-29 15:21:19 ===
+Source directory: /data3/zd/PPI/for_dl_train/result_up/predict/predict-260129/test/aa.data
+HMM file: /data3/zd/PPI/for_dl_train/update/virus/cluster_virus_for_model/HMM/HMM_data/combined.hmm
+Result directory: /data3/zd/PPI/for_dl_train/result_up/predict/predict-260129/test/HMM
+
+Found 1 FASTA files to process
+
+[1/1] Finished: MN565031.1.fasta (Return code: 0)
+
+=== ALL HMMSCAN TASKS COMPLETED AT 2026-01-29 15:21:40 ===
+Now creating summary CSV file...
+Summary CSV file created: /data3/zd/PPI/for_dl_train/result_up/predict/predict-260129/test/HMM/HMM_result.csv
+Final annotated CSV file created: /data3/zd/PPI/for_dl_train/result_up/predict/predict-260129/test/HMM/combined_hmmscan_results_with_func.csv
+Virus-Host combination file created: /data3/zd/PPI/for_dl_train/result_up/predict/predict-260129/test/virus_host.csv
+Process completed successfully at 2026-01-29 15:21:40

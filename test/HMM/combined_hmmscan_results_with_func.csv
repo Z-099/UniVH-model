@@ -1,0 +1,3 @@
+filename,target_name,query_name,#GroupName,FunctionalCategory,ConsensusFunctionalDescription,virus_category
+MN565031.1,VFAM42360,QGL51678.1,VFAM42360,XhXpXr,sp|Q9IJX4|POLN_CRPVC Replicase polyprotein,VOG_Xr
+MN565031.1,VFAM00087,QGL51679.1,VFAM00087,Xs,sp|P13418|POLS_CRPVC Structural polyprotein,VOG_Xs
