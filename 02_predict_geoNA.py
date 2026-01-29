@@ -6,6 +6,7 @@ import os
 import numpy as np
 from collections import defaultdict
 import logging
+import argparse
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -316,11 +317,17 @@ class VirusHostPredDataset(torch.utils.data.Dataset):
         return host_embs, host_indices, virus_embs, virus_indices, host_catfeat, virus_catfeat, label, extra_meta
 
 def main():
-    save_dir = "../train_model"
-    embed_dir = "../Virus_Host_embedding"
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--pred_dir", default="../UniVH-model-main/test",
+                        help="Prediction working directory containing virus_host.csv, embedding/, HMM/ etc.")
+    args = parser.parse_args()
+
+    save_dir = "../UniVH-model-main/model_train"
+    embed_dir = "../UniVH-model-main"
     timestamp = "20251205_095504"
-    pred_dir = "../test"
-    data_dir = "../data"
+    # pred_dir = "../UniVH-model-main/test"
+    pred_dir = args.pred_dir
+    data_dir = "../UniVH-model-main"
     pred_pair_csv = f"{pred_dir}/virus_host.csv"
     pred_virus_csv = f"{pred_dir}/HMM/combined_hmmscan_results_with_func.csv"
     vector_dir = f"{pred_dir}/embedding"
