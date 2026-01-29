@@ -1,4 +1,4 @@
-<img width="1250" height="102" alt="image" src="https://github.com/user-attachments/assets/69c45244-2507-4c6a-9686-da8c56824ed7" /># UniVH
+# UniVH
 
 ## Overview
 RNA viruses, characterized by their exceptionally high mutation rates and rapid adaptability, pose significant challenges to public health. Despite the vast amounts of viral sequence data revealed through metagenomic sequencing, identifying viruses with high zoonotic potential remains a critical issue in pandemic preparedness. Existing host prediction models often suffer from limitations in accuracy and coverage, particularly when applied to emerging viruses and rare host species.
@@ -103,6 +103,7 @@ python 02_predict_geoNA.py --pred_dir ../UniVH-model-main/test
 If you use this dataset or framework, please cite the corresponding publication.
 
 Zhao D, Wang YF, Yin ZF, et al. *A unified framework to prioritize RNA virus cross-species transmission risk across an expansive host landscape.* Under review.
+
 
 
 
