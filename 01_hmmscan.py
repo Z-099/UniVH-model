@@ -9,24 +9,35 @@ import sys
 import concurrent.futures
 import pandas as pd
 import itertools
+import argparse
 
 # ============================================================================
 # Configuration
 # ============================================================================
 
-source_dir = "../test/aa.data"
-hmm_file = "../data/combined.hmm"
-result_dir = "../test/HMM"
-log_file = "../test/HMM/HMM_log.txt"
-summary_file = "../test/HMM/HMM_result.csv"
-annotation_tsv = "../data/vfam.annotations.tsv"
-final_output = "../test/HMM/combined_hmmscan_results_with_func.csv"
+parser = argparse.ArgumentParser()
+parser.add_argument("--source_dir", default="../UniVH-model-main/test/aa.data")
+parser.add_argument("--virus_host_output", default="../UniVH-model-main/test/virus_host.csv")
+parser.add_argument("--max_workers", type=int, default=32)
+args = parser.parse_args()
+
+source_dir = args.source_dir
+virus_host_output = args.virus_host_output
+max_workers = args.max_workers
+
+# source_dir = "../UniVH-model-main/test/aa.data"
+hmm_file = "../UniVH-model-main/combined.hmm"
+result_dir = "../UniVH-model-main/test/HMM"
+log_file = "../UniVH-model-main/test/HMM/HMM_log.txt"
+summary_file = "../UniVH-model-main/test/HMM/HMM_result.csv"
+annotation_tsv = "../UniVH-model-main/vfam.annotations.tsv"
+final_output = "../UniVH-model-main/test/HMM/combined_hmmscan_results_with_func.csv"
 
 # Virus-Host combination parameters
-host_file = "../train_model/dataset.csv"
-virus_host_output = "../test/virus_host.csv"
+host_file = "../UniVH-model-main/model_train/dataset.csv"
+# virus_host_output = "../UniVH-model-main/test/virus_host.csv"
 
-max_workers = 32
+# max_workers = 32
 
 # ============================================================================
 # Part 1: HMMSCAN Processing
@@ -206,4 +217,3 @@ comb_df.to_csv(virus_host_output, index=False)
 log_handle.write("Virus-Host combination file created: {0}\n".format(virus_host_output))
 log_handle.write("Process completed successfully at {0}\n".format(time.strftime("%Y-%m-%d %H:%M:%S")))
 log_handle.close()
-
