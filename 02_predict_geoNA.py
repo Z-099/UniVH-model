@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 import torch
+import torch.nn as nn
+import torch.nn.functional as F
 import pandas as pd
 import pickle
 import os
@@ -11,7 +13,7 @@ import argparse
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-from luca_train_pro_geo_ES import VirusHostClassifier, encode_categorical_onehot, collate_fn_gpu_cache
+# from luca_train_pro_geo_ES import VirusHostClassifier, encode_categorical_onehot, collate_fn_gpu_cache
 
 class VirusHostClassifier(nn.Module):
     def __init__(self, embedding_dim=1280, reduced_dim=256, major_classes=[], func_list={},
@@ -594,3 +596,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
